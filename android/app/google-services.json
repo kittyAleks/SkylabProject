@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "271135060880",
+    "project_id": "skylabproject-ad509",
+    "storage_bucket": "skylabproject-ad509.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271135060880:android:a52076cc0c700c99913915",
+        "android_client_info": {
+          "package_name": "com.skylabproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "271135060880-ij24ngi93q6v695be4b0qa8vsrsm5n3f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw4S38uNDTXQ4kt0mFCGYUvkDF7q8rfmE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "271135060880-ij24ngi93q6v695be4b0qa8vsrsm5n3f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
