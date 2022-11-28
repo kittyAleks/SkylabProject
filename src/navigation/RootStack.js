@@ -1,6 +1,8 @@
 import React from "react";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { HomeScreen } from "../screens/HomeScreen";
+import { StartScreen } from "../screens/StartScreen";
+import { SignInScreen } from "../screens/SignInScreen";
 
 const defaultOptions = {
   headerStyle: {
@@ -24,18 +26,27 @@ const Stack = createNativeStackNavigator();
 export const RootStack = () => {
   return (
     <Stack.Navigator>
-      {/*<Stack.Screen*/}
-      {/*  name="SignIn"*/}
-      {/*  component={SignInScreen}*/}
-      {/*  options={{*/}
-      {/*    headerTitle: "",*/}
-      {/*    ...defaultOptions,*/}
-      {/*  }}*/}
-      {/*/>*/}
-
       <Stack.Screen
         name="HomeScreen"
         component={HomeScreen}
+        options={{
+          headerShown: false,
+          headerTitle: "",
+          ...defaultOptions,
+        }}
+      />
+      <Stack.Screen
+        name="SignIn"
+        component={SignInScreen}
+        options={{
+          headerShown: false,
+          headerTitle: "",
+          ...defaultOptions,
+        }}
+      />
+      <Stack.Screen
+        name="Start"
+        component={StartScreen}
         options={{
           headerShown: false,
           headerTitle: "",

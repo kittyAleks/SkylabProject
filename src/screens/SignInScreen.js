@@ -18,6 +18,12 @@ export const SignInScreen = () => {
         email: val,
         isValidEmail: true,
       }));
+    } else {
+      setData((prevState) => ({
+        ...prevState,
+        email: val,
+        isValidEmail: false,
+      }));
     }
   };
 
@@ -27,6 +33,12 @@ export const SignInScreen = () => {
         ...prevState,
         password: val,
         isValidPassword: true,
+      }));
+    } else {
+      setData((prevState) => ({
+        ...prevState,
+        password: val,
+        isValidPassword: false,
       }));
     }
   };

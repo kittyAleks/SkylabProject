@@ -1,13 +1,21 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
 import { Button } from "react-native-elements";
+import { removeUserStatus } from "../config/storage";
 
-export const HomeScreen = () => {
+export const HomeScreen = ({navigation}) => {
+
+  const LogOut = () => {
+    navigation.navigate('Start')
+    // removeUserStatus()
+  };
+
   return (
     <View style={styles.container}>
+      <Text>Home Screen</Text>
       <Button
         title={"LogOut"}
-        // onPress={}
+        onPress={LogOut}
         buttonStyle={styles.button}
         titleStyle={styles.titleSignIn}
       />
@@ -17,10 +25,9 @@ export const HomeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    borderColor: 'red',
-    borderWidth: 1,
     flexDirection: 'column',
-    justifyContent: 'center'
+    justifyContent: 'center',
+
   },
   button: {
     marginLeft: 5,
