@@ -3,27 +3,25 @@ import { NavigationContainer } from "@react-navigation/native";
 import { RootStack } from "./src/navigation/RootStack";
 import { AuthStack } from "./src/navigation/AuthStack";
 import { getStatusValid } from "./src/config/storage";
-import { notificationListener, requestUserPermission } from "./src/config/notification";
+import { getPushData, notificationListener, requestUserPermission } from "./src/config/notification";
 
 export const Main = () => {
   const [status, setStatus] = useState(false);
-  console.log("QQQQstatusstatus", status);
 
   useEffect(() => {
     requestUserPermission();
     notificationListener();
-    // createChannel();
-  }, []);
+  }, [status]);
 
   useEffect(() => {
     getStatusForm();
-  }, [status]);
+  }, );
   const getStatusForm = async () => {
     const statusForm = await getStatusValid();
-    console.log("QQQQstatusForm", statusForm);
-    if (statusForm.emailStatus) {
+    if (statusForm.emailStatus === true) {
       setStatus(statusForm.emailStatus);
     }
+    getPushData()
   };
 
   return (

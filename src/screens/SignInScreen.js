@@ -49,8 +49,6 @@ export const SignInScreen = () => {
       emailStatus: data.isValidEmail,
       passwordStatus: data.isValidPassword,
     });
-
-    console.log("EEEdata", data);
   };
 
   return (
